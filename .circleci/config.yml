@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  testcafe:
+    docker:
+      - image: circleci/8.11.3-browsers
+    working_directory: ~/repo/testcafe
+    steps:
+      - checkout:
+          path: ~/repo
+      - run: npm it
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - testcafe
