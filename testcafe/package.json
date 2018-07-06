@@ -1,0 +1,14 @@
+{
+  "name": "play-testcafe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcafe all test.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "testcafe": "^0.20.4"
+  }
+}
