@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout:
           path: ~/repo
-      - run: npm ci
+      - run: npm i
       - run: npm test
 
   codeceptjs:
@@ -17,7 +17,7 @@ jobs:
     steps:
       - checkout:
           path: ~/repo
-      - run: npm ci
+      - run: npm i
       - run: npm run selenium-install
       - run: npm run selenium-start
       - run: npm test

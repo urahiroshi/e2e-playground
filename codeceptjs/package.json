@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "codeceptjs run",
+    "test": "selenium-standalone start & codeceptjs run",
     "selenium-install": "selenium-standalone install",
     "selenium-start": "selenium-standalone start &"
   },
