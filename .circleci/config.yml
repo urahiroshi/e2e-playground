@@ -7,10 +7,24 @@ jobs:
     steps:
       - checkout:
           path: ~/repo
-      - run: npm it
+      - run: npm ci
+      - run: npm test
+
+  codeceptjs:
+    docker:
+      - image: circleci/node:8.11.3-browsers
+    working_directory: ~/repo/codeceptjs
+    steps:
+      - checkout:
+          path: ~/repo
+      - run: npm ci
+      - run: npm run selenium-install
+      - run: npm run selenium-start
+      - run: npm test
 
 workflows:
   version: 2
   test:
     jobs:
       - testcafe
+      - codeceptjs
