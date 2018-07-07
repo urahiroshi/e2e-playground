@@ -19,8 +19,7 @@ jobs:
           path: ~/repo
       - run: npm i
       - run: npm run selenium-install
-      - run: npm run selenium-start
-      - run: npm test
+      - run: npm run selenium-start && npm test
 
 workflows:
   version: 2
